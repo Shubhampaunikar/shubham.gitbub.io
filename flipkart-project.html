@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Flipkart">
+    <meta name="keywords" content="flipkart,shoping,latest,smartphones,electronics">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Flipkart">
+    <title>Flipkart</title>
+    <style>
+        .top{
+            background-color: #2874f0;
+            color:white;
+            position: fixed;
+            display: inline;
+            top:0;
+            left:0;
+            right:0;
+            height: fit-content;
+        }
+        .top-text{
+            padding-right: 10px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .login-button{
+            height: 30px;
+            background-color: whitesmoke;
+            color: #2874f0;
+            font-weight: bold;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .image{
+            width: 90px;
+            height: 50px;
+            padding: 10px 20px 0px 40px;
+        }
+        .close{
+            background-color: tomato;
+            float:right;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close:hover{
+            background-color: red;
+        }
+        .main{
+            display: none;
+            position:fixed;
+            padding-top:5%;
+            z-index: 1;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+        }
+        .content{
+            position: relative;
+            background-color:white;
+            margin:auto;
+            width:60%;
+            border:2px solid gainsboro;
+        }
+        input{
+            outline:0 0 1px 0;
+            margin:2%;
+            margin-left: 375px;
+            border-bottom: 3px solid black;
+        }
+        .btn{
+            width: 20%;
+            margin-left:370px;
+            margin-bottom:30px;
+            color: aliceblue;
+            background-color:rgb(224, 65, 100);
+        }
+        .slideshow{
+            position: relative;
+        }
+        .slide{
+            position:absolute;
+            display: none;
+            margin-top: 100px;
+        }
+        .img{
+            width:1580px;
+            height:300px;
+        }
+        .image1{
+            width: 90px;
+            height: 40px;
+            padding: 10px 20px 1px 40px;
+        }
+        .main1{
+            position: relative;
+            padding: 10px 10px 10px 10px;
+            width: 31.8%;
+            text-align: center;
+            background-color:aliceblue;
+            display: inline-block;
+        }
+        #margin{
+            margin-top: 400px;
+        }
+        .green1{
+            color: green;
+            position:relative
+        }
+        .top1{
+            background-color: blue;
+            color:aliceblue;
+        }
+        .top-text1{
+            padding-right: 10px;
+        }
+        .prev{
+            left:8px;
+            cursor: pointer;
+            position: absolute;
+            top:30%;
+            padding: 10px;
+            background-color: white;
+        }
+        .next{
+            right:8px;
+            cursor: pointer;
+            position: absolute;
+            top:30%;
+            padding: 10px;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top">
+            <img class="image" src="flipkart-plus_8d85f4.png" alt="flipkart">
+            <span  class="top-text">Home</span>
+            <span  class="top-text">About</span>
+            <span  class="top-text">Contact</span>
+            <input style="border-radius: 4px;" type="search" placeholder="Search here">
+            <button type="button" class="login-button">Search</button>     
+            <button type="button" class="login-button" id="login">Login</button>   
+        </div>
+
+        <div class="main" id="model">
+            <div class="content">
+                <button type="button" class="close" id="close">&#10006</button>
+                <h1 style="color: blue; text-align: center;">Login</h1>
+                <input type="email" name="email" id="email" placeholder="Enter your ID"><br>
+                <input type="password" name="pass" id="pass" placeholder="Enter Password"><br>
+                <button class="btn" onclick="myLogin()" > Login Here</button>
+            </div>
+        </div>
+    </header>
+    <div class="slideshow">
+        <div class="slide">
+            <img class="img" src="https://rukminim1.flixcart.com/flap/1688/280/image/ff1e532cba96be24.jpg?q=50" data-tkid="M_6cb352e5-ae5b-44a8-89ef-64eaa95cdd1b_2.F3QWPT6315AV" >
+        </div>
+        <div class="slide">
+            <img class="img" src="https://rukminim1.flixcart.com/flap/1688/280/image/c30fbaa0e35d8a65.jpg?q=50" data-tkid="M_6cb352e5-ae5b-44a8-89ef-64eaa95cdd1b_2.YM5AOH287ACE" alt="HP" >
+        </div>
+        <div class="slide">
+            <img class="img" src="https://rukminim1.flixcart.com/flap/1688/280/image/a12ad9624bdcd3d9.jpg?q=50" data-tkid="M_6cb352e5-ae5b-44a8-89ef-64eaa95cdd1b_2.AVSLDUBV2JOY" >
+        </div>
+    </div>
+    <a onclick="goslide(-1)" class="prev">&#10094</a>
+    <a onclick="goslide(1)" class="next">&#10095</a>
+    <main>
+        <hr style="color: grey;">
+        <div  class="main1" id="margin">
+            <img src="vivo-x50-pro-vivo-2006-original-imaftppahwbc6myx.jpeg" alt="Vivo"><br>
+            <h3 >Vivo-x50-Pro-Alpha-grey-256-gb</h3>
+            <a class="green1" href="https://www.flipkart.com/vivo-x50-pro-alpha-grey-256-gb/p/itmdf8a4496a52e7?pid=MOBFTGKRGHTZZPPQ&lid=LSTMOBFTGKRGHTZZPPQ9W2XYI&fm=neon%2Fmerchandising&iid=M_7309a696-5745-492c-b3dd-697d961d3bb3_1.AL0H22Z5NAG3&ppt=hp&ppn=homepage&ssid=htfyys8plc0000001624620215038&otracker=dynamic_omu_infinite_Best%2BBattery%2BPhones_1_1.dealCard.OMU_INFINITE_AL0H22Z5NAG3&cid=AL0H22Z5NAG3">Click to open</a>
+            <h4>Now Rs.49,990</h4>
+        </div>
+
+        <div  class="main1"id="margin">
+            <img src="oppo-a9-2020-cph1937-original-imafkhhxh2vsxnmq.jpeg" alt="Vivo"><br>
+            <h3>Oppo-Reno3-Pro-Sky-White-128-gb</h3>
+            <a class="green1" href="https://www.flipkart.com/oppo-a9-2020-marine-green-128-gb/p/itm32799ab1d45b4?pid=MOBFKCS5G9MSXBVF&lid=LSTMOBFKCS5G9MSXBVF83WPUP&fm=neon%2Fmerchandising&iid=M_7309a696-5745-492c-b3dd-697d961d3bb3_1.H07BNB7S4V29&ppt=hp&ppn=homepage&ssid=htfyys8plc0000001624620215038&otracker=dynamic_omu_infinite_Best%2BBattery%2BPhones_2_1.dealCard.OMU_INFINITE_H07BNB7S4V29&cid=H07BNB7S4V29">Click to open</a>
+            <h4>Now Rs.16,990</h4>
+        </div>
+
+        <div  class="main1"id="margin">
+            <img src="poco-m2-pro-mzb9621in-original-imaftg9fkdpgbgxq.jpeg" alt="Poco"><br>
+            <h3>Poco-M2-Pro-Two-Shades-Black-64-gb</h3>
+            <a class="green1" href="https://www.flipkart.com/poco-m2-pro-two-shades-black-64-gb/p/itmaf67e90291adf?pid=MOBFT7MKC9DMG2PU&lid=LSTMOBFT7MKC9DMG2PUNVVJJB&fm=neon%2Fmerchandising&iid=M_7309a696-5745-492c-b3dd-697d961d3bb3_1.QN5Y8USF1JVI&ppt=hp&ppn=homepage&ssid=htfyys8plc0000001624620215038&otracker=dynamic_omu_infinite_Best%2BBattery%2BPhones_4_1.dealCard.OMU_INFINITE_QN5Y8USF1JVI&cid=QN5Y8USF1JVI">Click to open</a>
+            <h4>Now Rs.13,999</h4>
+        </div>
+
+        <div  class="main1">
+            <img src="samsung-galaxy-m11-sm-m115fzkeins-original-imafscjyhxwghgwf.jpeg" alt="Vivo"><br>
+            <h3 >Samsung-Galaxy-M11-Black-32-gb</h3>
+            <a class="green1" href="https://www.flipkart.com/samsung-galaxy-m11-black-32-gb/p/itm0871b45a83143?pid=MOBFRZZHRFVXDUZZ&lid=LSTMOBFRZZHRFVXDUZZ4Z64NG&fm=neon%2Fmerchandising&iid=M_7309a696-5745-492c-b3dd-697d961d3bb3_1.9KK7Q86K1XDD&ppt=hp&ppn=homepage&ssid=htfyys8plc0000001624620215038&otracker=dynamic_omu_infinite_Best%2BBattery%2BPhones_5_1.dealCard.OMU_INFINITE_9KK7Q86K1XDD&cid=9KK7Q86K1XDD">Click to open</a>
+            <h4>Now Rs.10,799</h4>
+        </div>
+
+        <div  class="main1">
+            <img src="oppo-reno3-pro-cph2035-original-imafpj4fpqp3zpq3.jpeg" alt="Vivo"><br>
+            <h3 >OPPO Reno3 Pro (Sky White, 128 GB)  (8 GB RAM)</h3>
+            <a class="green1" href="https://www.flipkart.com/oppo-reno3-pro-sky-white-128-gb/p/itm05804cb14fc19?pid=MOBFPYA499Z6NTKV&lid=LSTMOBFPYA499Z6NTKV3YDJM7&fm=neon%2Fmerchandising&iid=M_7309a696-5745-492c-b3dd-697d961d3bb3_1.ONE5RP4YDULP&ppt=hp&ppn=homepage&ssid=htfyys8plc0000001624620215038&otracker=dynamic_omu_infinite_Best%2BBattery%2BPhones_6_1.dealCard.OMU_INFINITE_ONE5RP4YDULP&cid=ONE5RP4YDULP">Click to open</a>
+            <h4>Now Rs.24,990</h4>
+        </div>
+
+        <div  class="main1">
+            <img src="realme-x3-superzoom-rmx2085-original-imaft26hvewk4dpj.jpeg" alt="Vivo"><br>
+            <h3>Realme-x3-Superzoom-Arctic-White-128-gb</h3>
+            <a class="green1" href="https://www.flipkart.com/realme-x3-superzoom-arctic-white-128-gb/p/itm7e4d21f06e37e?pid=MOBFSS3QZ3SAHJPS&lid=LSTMOBFSS3QZ3SAHJPSDXH8OF&fm=neon%2Fmerchandising&iid=M_7309a696-5745-492c-b3dd-697d961d3bb3_1.896KD8DDM5K0&ppt=hp&ppn=homepage&ssid=htfyys8plc0000001624620215038&otracker=dynamic_omu_infinite_Best%2BBattery%2BPhones_9_1.dealCard.OMU_INFINITE_896KD8DDM5K0&cid=896KD8DDM5K0">Click to open</a>
+            <h4>Now Rs.21,999</h4>
+        </div>
+    </main>
+    <footer class="top1">
+        <div style="padding: 2px;">
+            <h4>Copyright@ Shubham Paunikar</h4>
+        </div>
+    </footer>
+
+    <script>
+        var login=document.getElementById('login');
+        var model=document.getElementById('model');
+        var close=document.getElementById('close');
+
+        login.onclick=function(){
+            model.style.display="block";
+        }
+        close.onclick=function(){
+            model.style.display="none";
+
+        }
+        window.onclick=function(e){
+            if(e.target==model){
+                model.style.display="none";
+            }
+        }
+        function myLogin(){
+            var email=document.getElementById('email');
+            var pass=document.getElementById('pass');
+
+            if(email.value=="shubhampaunikar747@gmail.com"){
+                if(pass.value=="abc123"){
+                    alert("Welcome to my page");
+                }
+                else{
+                    alert("Password is incorrect");
+                }
+            }
+            else{
+                alert("Email is not registered here");
+            }
+        }
+
+        var sindex=0;
+
+        slideshow();
+
+        function slideshow(){
+            var i;
+            var s=document.getElementsByClassName('slide');
+            var count=s.length;
+
+            for(i=0;i<count;i++){
+                s[i].style.display="none";
+            }
+
+            sindex++;
+
+            if(sindex>count){
+                sindex=1;
+            }
+
+            s[sindex-1].style.display="block";
+            
+            setTimeout(slideshow,2000);
+        }
+
+        var sindex1=1;
+
+        slideshow1(sindex1);
+
+        function goslide(n){
+            slideshow(sindex1=sindex1+n);
+        }
+        
+        function slideshow1(n){
+            var i;
+            var s=document.getElementsByClassName("slide");
+            var count=s.length;
+            if(n>count){
+                sindex1=1;
+            }
+            if(n<1){
+                sindex1=count;
+            }
+            for(i=0;i<count;i++){
+                s[i].style.display="none";
+            }
+            s[sindex1-1].style.display="block";
+        }
+    </script>
+
+</body>
+</html>
